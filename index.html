@@ -1,16 +1,197 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Harshini's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Harshini Rajha Sree | Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0b1120;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px 8%;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #64dfdf;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Hero section */
+        .hero {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: #0e7490;
+            opacity: 0.12;
+            filter: blur(140px);
+            border-radius: 50%;
+        }
+
+        .content {
+            position: relative;
+            max-width: 800px;
+        }
+
+        .tag {
+            display: inline-block;
+            color: #64dfdf;
+            border: 1px solid rgba(100,223,223,0.3);
+            background: rgba(100,223,223,0.06);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #64dfdf;
+        }
+
+        .description {
+            color: #94a3b8;
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 580px;
+            margin: 0 auto 40px;
+        }
+
+        /* Portfolio button */
+        .portfolio-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 17px 32px;
+            background: #64dfdf;
+            color: #0b1120;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+        .portfolio-btn:hover {
+            background: #ffffff;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(100,223,223,0.2);
+        }
+
+        .arrow {
+            font-size: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #64748b;
+            font-size: 13px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 22px 6%;
+            }
+
+            .hero {
+                padding: 60px 22px;
+            }
+
+            .description {
+                font-size: 15px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Harshini Rajha Sree</h1>
-    <h2>Biomedical Engineering Portfolio</h2>
 
-    <p>Welcome to my professional portfolio.</p>
+    <nav>
+        <div class="logo">H<span>.</span></div>
+        <a href="mailto:your-email@example.com">Contact</a>
+    </nav>
 
-    <a href="GSR_PORTFOLIO.pdf">
-        View My Portfolio PDF
-    </a>
+    <section class="hero">
+        <div class="content">
+
+            <div class="tag">Professional Portfolio</div>
+
+            <h1>
+                Harshini<br>
+                <span>Rajha Sree</span>
+            </h1>
+
+            <p class="description">
+                Biomedical Engineering | Healthcare Technology |
+                Medical Devices | Innovation
+            </p>
+
+            <a href="GSR_PORTFOLIO.pdf" class="portfolio-btn">
+                Explore My Portfolio
+                <span class="arrow">↗</span>
+            </a>
+
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Harshini Rajha Sree · Professional Portfolio
+    </footer>
+
 </body>
 </html>
