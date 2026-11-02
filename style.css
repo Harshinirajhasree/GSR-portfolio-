@@ -1,0 +1,23 @@
+
+.student-details {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 30px 0;
+}
+
+.topic {
+    margin: 35px 0;
+}
+
+.topic span {
+    color: #5eead4;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.topic h2 {
+    font-size: 28px;
+    margin-top: 12px;
+    color: #ffffff;
+}
