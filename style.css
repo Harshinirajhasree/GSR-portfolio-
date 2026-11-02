@@ -1,23 +1,219 @@
 
-.student-details {
-    color: #cbd5e1;
-    font-size: 16px;
-    line-height: 1.8;
-    margin: 30px 0;
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Main Background */
+body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #020617, #0f172a, #102c3a);
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+    overflow-x: hidden;
+}
+
+/* Background Glow */
+body::before {
+    content: "";
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    background: #14b8a6;
+    filter: blur(180px);
+    opacity: 0.18;
+
+    top: -100px;
+    left: -100px;
+
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+
+    width: 400px;
+    height: 400px;
+
+    background: #6366f1;
+    filter: blur(180px);
+    opacity: 0.2;
+
+    bottom: -100px;
+    right: -100px;
+
+    pointer-events: none;
+}
+
+/* Main Card */
+.hero {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 950px;
+
+    padding: 75px 65px;
+
+    background: rgba(15, 23, 42, 0.85);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+
+    backdrop-filter: blur(20px);
+
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+
+    animation: appear 1s ease;
+}
+
+/* Course Tag */
+.tag {
+    display: inline-block;
+
+    padding: 10px 20px;
+    margin-bottom: 30px;
+
+    border: 1px solid rgba(94, 234, 212, 0.4);
+    border-radius: 30px;
+
+    background: rgba(20, 184, 166, 0.08);
+
+    color: #5eead4;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* Main Heading */
+h1 {
+    font-size: clamp(36px, 5vw, 62px);
+    line-height: 1.2;
+
+    font-weight: 800;
+    letter-spacing: -2px;
+
+    margin-bottom: 35px;
+}
+
+h1 span {
+    color: #5eead4;
+}
+
+/* Student Details */
+.student-details {
+    color: #cbd5e1;
+
+    font-size: 17px;
+    line-height: 2;
+
+    margin-bottom: 35px;
+}
+
+/* Topic Section */
 .topic {
-    margin: 35px 0;
+    border-left: 3px solid #5eead4;
+
+    padding-left: 22px;
+    margin: 35px 0 45px;
 }
 
 .topic span {
     color: #5eead4;
+
     font-size: 12px;
-    letter-spacing: 3px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
 }
 
 .topic h2 {
-    font-size: 28px;
+    font-size: clamp(24px, 4vw, 36px);
+
     margin-top: 12px;
+
     color: #ffffff;
+}
+
+/* Presentation Button */
+.portfolio-btn {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 18px;
+
+    padding: 16px 30px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #5eead4, #2dd4bf);
+
+    color: #022c2a;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    box-shadow: 0 8px 25px rgba(45, 212, 191, 0.2);
+
+    transition: all 0.3s ease;
+}
+
+.portfolio-btn:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(45, 212, 191, 0.35);
+}
+
+.portfolio-btn span {
+    font-size: 20px;
+}
+
+/* Entrance Animation */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .hero {
+        padding: 40px 25px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        letter-spacing: -1px;
+    }
+
+    .student-details {
+        font-size: 15px;
+    }
 }
