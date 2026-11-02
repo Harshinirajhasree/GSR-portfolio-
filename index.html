@@ -1,43 +1,191 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Galvanic Skin Response</title>
 
-    <!-- Connect CSS file -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #020617, #0f172a, #102c3a);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 450px;
+            height: 450px;
+            background: #14b8a6;
+            filter: blur(180px);
+            opacity: 0.18;
+            top: -100px;
+            left: -100px;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: #6366f1;
+            filter: blur(180px);
+            opacity: 0.2;
+            bottom: -100px;
+            right: -100px;
+        }
+
+        .hero {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 950px;
+            padding: 75px 65px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 28px;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+            animation: appear 1s ease;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid rgba(94, 234, 212, 0.4);
+            border-radius: 30px;
+            color: #5eead4;
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            background: rgba(20, 184, 166, 0.08);
+        }
+
+        h1 {
+            font-size: clamp(36px, 5vw, 62px);
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin-bottom: 35px;
+        }
+
+        h1 span {
+            color: #5eead4;
+        }
+
+        .student-details {
+            color: #cbd5e1;
+            font-size: 17px;
+            line-height: 2;
+            margin-bottom: 35px;
+        }
+
+        .topic {
+            border-left: 3px solid #5eead4;
+            padding-left: 22px;
+            margin: 35px 0 45px;
+        }
+
+        .topic span {
+            color: #5eead4;
+            font-size: 12px;
+            letter-spacing: 4px;
+            font-weight: 600;
+        }
+
+        .topic h2 {
+            font-size: clamp(24px, 4vw, 36px);
+            margin-top: 12px;
+            color: #ffffff;
+        }
+
+        .portfolio-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 18px;
+            padding: 16px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #022c2a;
+            font-size: 16px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #5eead4, #2dd4bf);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(45, 212, 191, 0.2);
+        }
+
+        .portfolio-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(45, 212, 191, 0.35);
+        }
+
+        .portfolio-btn span {
+            font-size: 20px;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 40px 25px;
+            }
+
+            h1 {
+                letter-spacing: -1px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <section class="hero">
-        <div class="content">
 
-            <div class="tag">21BMC402J</div>
+        <div class="tag">21BMC402J</div>
 
-            <h1>
-                Biomedical Equipment<br>
-                <span>for Clinical Applications</span>
-            </h1>
+        <h1>
+            Biomedical Equipment<br>
+            <span>for Clinical Applications</span>
+        </h1>
 
-            <div class="student-details">
-                <p>Harshini Rajha Sree</p>
-                <p>RA2311013010033</p>
-            </div>
-
-            <div class="topic">
-                <span>TOPIC</span>
-                <h2>Galvanic Skin Response</h2>
-            </div>
-
-            <a href="GSR_PORTFOLIO.pdf" class="portfolio-btn">
-                View Presentation <span>↗</span>
-            </a>
-
+        <div class="student-details">
+            <p>Harshini Rajha Sree</p>
+            <p>RA2311013010033</p>
         </div>
+
+        <div class="topic">
+            <span>TOPIC</span>
+            <h2>Galvanic Skin Response</h2>
+        </div>
+
+        <a href="GSR_PORTFOLIO.pdf" class="portfolio-btn">
+            View Presentation <span>↗</span>
+        </a>
+
     </section>
 
 </body>
